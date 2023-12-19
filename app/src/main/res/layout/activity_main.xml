@@ -25,8 +25,8 @@
 
     <TextView
         android:id="@+id/cityName"
-        android:layout_width="47dp"
-        android:layout_height="23dp"
+        android:layout_width="199dp"
+        android:layout_height="42dp"
         android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/loctaion"
         android:fontFamily="@font/merriweathersans_medium"
@@ -166,7 +166,8 @@
                 app:constraint_referenced_ids="linearLayout,linearLayout2,linearLayout3,linearLayout4,linearLayout5,linearLayout6"
                 app:flow_maxElementsWrap="3"
                 app:flow_wrapMode="chain"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -397,14 +398,15 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:includeFontPadding="false"
-
         android:text="Design By \n Jay Patel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.841" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

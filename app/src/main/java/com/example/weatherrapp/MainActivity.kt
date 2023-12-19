@@ -22,17 +22,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        fetchWeatherData()
+        fetchWeatherData("Jaipur" )
 
     }
 
-    private fun fetchWeatherData() {
+    private fun fetchWeatherData(cityName:String) {
         val retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl("https://api.openweathermap.org/data/2.5/")
             .build().create(ApiInterface::class.java)
 
-        val response = retrofit.getWeatherData("jaipur", "d6d47ab5551def789a2e9831c8c03adf", units = "metric")
+        val response = retrofit.getWeatherData(cityName, "d6d47ab5551def789a2e9831c8c03adf", units = "metric")
         response.enqueue(object : Callback<WeatherApp> {
             @SuppressLint("SetTextI18n")
             override fun onResponse(call: Call<WeatherApp>, response: Response<WeatherApp>) {
@@ -56,14 +56,14 @@ class MainActivity : AppCompatActivity() {
                     binding.maxTemp.text= "Max Temp: $maxTemp °C"
                     binding.minTemp.text= "Min Temp: $minTemp °C"
                     binding.humidity.text="$humidity %"
-                   // binding.windSpeed.text="$windSpeed m/s"
+                   binding.windSpeed.text="$windSpeed m/s"
                   binding.sunRise.text="$sunRise"
                     binding.sunSet.text="$sunSet"
                     binding.sea.text="$seaLevel hPa"
                     binding.condition.text= condition
-                  /*  binding.day.text= dayName(System.currentTimeMillis())
+                    binding.day.text= dayName(System.currentTimeMillis())
                         binding.date.text= date()
-                        binding.cityName.text= ""*/
+                        binding.cityName.text= " $cityName   "
 
 
 
@@ -83,15 +83,16 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-   /* private fun date(): String{
-        val sdf = SimpleDateFormat("DD MMMM YYYY", Locale.getDefault())
+    private fun date(): String{
+        val sdf = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
         return sdf.format((Date()))
 
-    }*/
+    }
 
-    /*fun dayName(timestamp:Long) : String{
 
-        val sdf = SimpleDateFormat("EEEE", Locale.getDefault())
-        return sdf.format((Date()))
-    }*/
+    }
+fun dayName(timestamp:Long) : String{
+
+    val sdf = SimpleDateFormat("EEEE", Locale.getDefault())
+    return sdf.format((Date()))
 }
