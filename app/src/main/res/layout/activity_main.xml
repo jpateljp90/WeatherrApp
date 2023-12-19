@@ -24,11 +24,12 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/cityName"
         android:layout_width="47dp"
         android:layout_height="23dp"
         android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/loctaion"
+        android:fontFamily="@font/merriweathersans_medium"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/searchView"
         app:layout_constraintHorizontal_bias="0.416"
@@ -44,7 +45,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/cityName"
         app:lottie_autoPlay="true"
 
         app:lottie_loop="true"
@@ -56,15 +57,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="112dp"
-        android:text="textt"
+        android:fontFamily="@font/merriweathersans_semibold"
+        android:text="Today"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/cityName" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweathersans_semibold"
         android:text="00:00"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
@@ -76,6 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/merriweathersans_regular"
         android:text="Sunny"
         android:textAllCaps="true"
         android:textSize="20sp"
@@ -88,9 +92,10 @@
 
     <TextView
         android:id="@+id/max_temp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="155dp"
+        android:layout_height="25dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/merriweathersans_regular"
         android:text="Max: 00:00 C"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,9 +105,10 @@
 
     <TextView
         android:id="@+id/min_temp"
-        android:layout_width="85dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="157dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/merriweathersans_regular"
         android:text="Min: 00:00 C"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/max_temp"
@@ -115,10 +121,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/merriweathersans_bold"
         android:text="Saturday"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/min_temp"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="@+id/min_temp"
         app:layout_constraintTop_toBottomOf="@+id/min_temp"
         tools:ignore="MissingConstraints" />
@@ -128,6 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/merriweathersans_regular"
         android:text="2 December 2023"
         app:layout_constraintEnd_toEndOf="@+id/day"
         app:layout_constraintStart_toStartOf="@+id/day"
@@ -178,9 +186,10 @@
                     tools:ignore="MissingConstraints" />
 
                 <TextView
-                    android:id="@+id/Humidity"
+                    android:id="@+id/humidity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:gravity="center"
                     android:text="00 %" />
 
@@ -189,6 +198,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:text="Humidity"
                     android:textSize="10sp" />
 
@@ -212,10 +222,11 @@
                     tools:ignore="MissingConstraints" />
 
                 <TextView
-                    android:id="@+id/windspeed"
+                    android:id="@+id/windSpeed"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:gravity="center"
                     android:text="00:00" />
 
@@ -224,6 +235,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:text="Wind Speed"
                     android:textSize="10sp" />
 
@@ -251,6 +263,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:gravity="center"
                     android:text="SUNNY" />
 
@@ -259,6 +272,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:text="Condition"
                     android:textSize="10sp" />
 
@@ -282,10 +296,11 @@
                     tools:ignore="MissingConstraints" />
 
                 <TextView
-                    android:id="@+id/sunrise"
+                    android:id="@+id/sunRise"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:gravity="center"
                     android:text="00:00" />
 
@@ -294,6 +309,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:text="sunrise"
                     android:textSize="10sp" />
 
@@ -318,9 +334,10 @@
 
                 <TextView
 
-                    android:id="@+id/sunset"
+                    android:id="@+id/sunSet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:gravity="center"
                     android:text="00:00" />
 
@@ -329,6 +346,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:text="sunset"
                     android:textSize="10sp" />
 
@@ -356,6 +374,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:gravity="center"
                     android:text="0000 hPa" />
 
@@ -364,6 +383,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/merriweathersans_semibold"
                     android:text="sea"
                     android:textSize="10sp" />
 
@@ -378,8 +398,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="Design By \n Jay Patel"
+        android:includeFontPadding="false"
 
+        android:text="Design By \n Jay Patel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
